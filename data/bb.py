@@ -19,3 +19,15 @@ data = data [['CLIENTNUM', 'Attrition_Flag', 'Customer_Age', 'Gender',
 
 data.columns
 data.dtypes
+data.isnull().sum()
+data.drop_duplicates()
+data['Education_Level']=data['Education_Level'].fillna('Unknown')
+data['Marital_Status']=data['Marital_Status'].fillna('unknown')
+data['Income_Category']=data['Income_Category'].fillna('unknown')
+data['Marital_Status']
+bins=[25,30,40,50,60,70,80]
+labels=['20s','30s','40s','50s','60s','70s']
+data['Customer_Age_Bins']=pd.cut(data['Customer_Age'],bins=bins,labels=labels,include_lowest=True,right=False)
+data['Customer_Age_Bins']
+data['Attrition_Flag']
+data.columns
